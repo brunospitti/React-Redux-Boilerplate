@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot 1`] = `
+<header
+  className="css-1co4p4f"
+  onClick={[Function]}
+>
+  <a
+    aria-current="page"
+    className="css-etqpg5"
+    href="/"
+    onClick={[Function]}
+  >
+    React + Redux
+  </a>
+  <a
+    className="css-etqpg5"
+    href="/search-params"
+    onClick={[Function]}
+  />
+</header>
+`;
