@@ -1,4 +1,4 @@
-import { injectGlobal } from "emotion";
+import { createGlobalStyle } from "styled-components";
 
 export const colors = {
   primary: "#9C89B8",
@@ -10,7 +10,7 @@ export const colors = {
   danger: "#FF6767"
 };
 
-export default injectGlobal`
+export default createGlobalStyle`
     // css reset
 
     html, body, div, span, applet, object, iframe,

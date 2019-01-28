@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "@reach/router";
-import styled from "react-emotion";
+import styled from "styled-components";
 
 import { colors } from '../globalStyles';
 
 
-// styles with emotion
+// styles with styled-components
 const Container = styled("header")`
   background-color: ${colors.primary};
   position: sticky;
