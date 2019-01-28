@@ -1,12 +1,13 @@
-import { injectGlobal } from 'emotion'
+import { injectGlobal } from "emotion";
 
 export const colors = {
-    primary: "#9C89B8",
-    secondary: "#F0A6CA",
-    complementary: "#F0E6EF",
-    dark: "#333",
-    light: "#F7FFF7",
-    danger: "#FF6767"
+  primary: "#9C89B8",
+  secondary: "#F0A6CA",
+  complementary: "#F0E6EF",
+  dark: "#333",
+  light: "#F7FFF7",
+  lightGrey: "#C1C1C1",
+  danger: "#FF6767"
 };
 
 export default injectGlobal`
@@ -64,6 +65,7 @@ export default injectGlobal`
 
     * {
         font-family: -apple-system,BlinkMacSystemFont,'avenir next',avenir,'helvetica neue','segoe ui', helvetica,roboto,noto,arial,sans-serif;
+        font-size: 14px;
         color: ${colors.dark};
     }
 `;

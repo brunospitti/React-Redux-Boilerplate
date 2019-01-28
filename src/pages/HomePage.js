@@ -1,39 +1,40 @@
 import React from "react";
+import styled from "react-emotion";
 
-import { connect } from "react-redux";
+import { colors } from "../globalStyles";
 
-import Number from '../components/Number'
+import Number from "../components/Number";
 import Color from "../components/Color";
 
-import addNum from "../redux/actionCreators/addNum";
-import changeColor from "../redux/actionCreators/changeColor";
-
-class HomePage extends React.Component {
+export default class HomePage extends React.Component {
   render() {
+    const CenteredContainer = styled("div")`
+      width: 60%;
+      position: relative;
+      padding: 20px 0;
+      margin: 30px auto;
+      text-align: center;
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 120%;
+        left: -10%;
+        top: 0;
+        height: 1px;
+        background-color: ${colors.lightGrey};
+      }
+    `;
+
     return (
       <div className="home">
-        <Number num={this.props.num} addNum={this.props.addNum} />
-        <Color color={this.props.color} changeColor={this.props.changeColor}/>
+        <CenteredContainer>
+          <Number />
+        </CenteredContainer>
+        <CenteredContainer>
+          <Color />
+        </CenteredContainer>
       </div>
     );
   }
 }
-
-const mapStateToProps = (state) => ({
-  num: state.num,
-  color: state.color
-});
-
-const mapDispatchToProps = dispatch => ({
-  addNum(num) {
-    dispatch(addNum(num));
-  },
-  changeColor(color) {
-    dispatch(changeColor(color));
-  },
-});
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(HomePage);
