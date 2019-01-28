@@ -1,3 +1,3 @@
-React + Redux Boilerplate 2.0
+React + Redux Boilerplate
 
-Using react, redux, emotion, jest and loadable
+Using react, redux, styled-components, jest and loadable
